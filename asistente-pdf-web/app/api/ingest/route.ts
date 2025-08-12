@@ -29,7 +29,8 @@ export async function POST(req: NextRequest) {
       .single();
     if (docErr) throw docErr;
 
-    const text = await extractTextFromPDF(Buffer.from(bytes));
+    // ✅ destructuramos el string 'text' del objeto que devuelve la función
+    const { text } = await extractTextFromPDF(bytes);
     const chunks = chunkText(text, 1200);
     const embeddings: number[][] = [];
     for (let i = 0; i < chunks.length; i += 50) {
