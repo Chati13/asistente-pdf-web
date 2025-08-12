@@ -8,6 +8,7 @@ export async function extractTextFromPDF(bytes: Uint8Array): Promise<{
   text: string;
   pageHints: { page?: number }[];
 }> {
+  const { default: pdfParse } = await import("pdf-parse"); // ⬅️ import dinámico
   const buffer = Buffer.from(bytes);
   const result = await pdfParse(buffer);
 
