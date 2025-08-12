@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabaseAdmin";
-import { openai, CHAT_MODEL, EMBEDDINGS_MODEL } from "@/lib/openai";
+import { supabaseAdmin } from "../../../lib/supabaseAdmin";
+import { openai, CHAT_MODEL, EMBEDDINGS_MODEL } from "../../../lib/openai";
 
 export const runtime = "nodejs";
 
