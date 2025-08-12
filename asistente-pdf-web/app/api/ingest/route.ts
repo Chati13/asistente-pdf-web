@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabaseAdmin";
-import { openai, EMBEDDINGS_MODEL } from "@/lib/openai";
-import { chunkText } from "@/utils/chunk";
-import { extractTextFromPDF } from "@/utils/parsePdf";
+import { supabaseAdmin } from "../../../lib/supabaseAdmin";
+import { openai, EMBEDDINGS_MODEL } from "../../../lib/openai";
+import { chunkText } from "../../../utils/chunk";
+import { extractTextFromPDF } from "../../../utils/parsePdf";
 
 export const runtime = "nodejs";
 
